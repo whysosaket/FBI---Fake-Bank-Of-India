@@ -1,0 +1,49 @@
+<div class="transaction-section">
+
+    <!-- The below code is for the heading of the transactions page -->
+    <div class="header">
+    <div class="transaction">
+        <div class="detail">
+            <h3>Account</h3>
+        </div>
+
+        <div class="detail">
+            <h3>Amount</h3>
+        </div>
+
+        <div class="detail">
+            <h3>Date</h3>
+        </div>
+
+        <div class="detail">
+            <h3>Transaction ID</h3>
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <!-- the below code is for the transaction unit -->
+    <div class="transactions">
+<% for(let i=0; i<transactions.length; i++) { %>
+    <div class="transaction <%= transactions[i].type %>">
+
+        <div class="detail info">
+            <h6><span class="data">Account: </span><%= transactions[i].account %></h6>
+        </div>
+
+        <div class="detail info">
+            <h6><span class="data">Amount: </span> $<%= transactions[i].amount %></h6>
+        </div>
+
+        <div class="detail info">
+            <h6><span class="data">Date: </span><%= transactions[i].date %></h6>
+        </div>
+
+        <div class="detail info">
+            <h6><span class="data">Transaction ID: </span><%= transactions[i].id %></h6>
+        </div>
+    </div>
+    </div>
+
+    <% } %>
+</div>

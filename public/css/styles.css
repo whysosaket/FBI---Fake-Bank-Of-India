@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Montserrat:wght@300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+  background-color: #fafafa;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
+  font-family: "Montserrat", sans-serif;
+}
+
+.trademark {
+  text-align: center;
+  color: lightgray;
+}
+
+/* The below code is for account details section */
+.index-section{
+  background-color: rgba(120, 96,123, 0.3);
+  padding: 2rem;
+  max-width: 90%;
+  margin: auto;
+}
+.account-section{
+  text-align: center;
+  margin: 1rem;
+}
+.account{
+  margin: 3rem auto;
+  background-color: rgb(202, 202, 202);
+  max-width: 80%;
+  overflow: auto;
+  text-align: left;
+  font-family: 'Oswald';
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  border-radius: 20px;
+}
+
+.account-left{
+  float: left;
+  height: 15rem;
+}
+
+.account .profile-pic{
+  width: 6rem;
+  margin: 1rem;
+}
+
+.account-right{
+  margin: 1rem auto;
+}
+
+.account h5{
+  font-weight: 700;
+}
+
+.info{
+  font-weight: 300;
+  font-family: 'Fira Code', monospace;
+}
+
+/* This below is for transactions section */
+.transaction-section{
+  text-align: center;
+}
+
+.transaction{
+  max-width: 80%;
+  text-align: left;
+  margin: 0.1rem auto;
+  background-color: aqua;
+}
+
+.transaction .detail{
+  max-width: 30%;
+  display: inline-block;
+  margin: 1rem 3rem;
+}
+
+.info h5{
+  font-weight: 300;
+}
+
+.data{
+  visibility: hidden;
+  position: absolute;
+}
+
+.header .transaction h3{
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.header .detail{
+  width: 12%;
+}
+
+.credit {
+  background-color: rgb(34, 215, 34);
+}
+
+.debit{
+  background-color: rgb(200, 55, 55);
+}
+
+/* Below code is for create page */
+.create{
+  text-align: center;
+  margin: 3rem;
+}
+
+.create form{
+  max-width: 50%;
+  margin: auto;
+  text-align: left;
+  background-color: rgba(120, 96,123, 0.3);
+  padding: 2rem;
+}
+
+/* The below code is for transfer section */
+
+.transaction-section{
+  text-align: center;
+}
+
+.transfer{
+  margin: 2rem auto;
+  text-align: left;
+  background-color: grey;
+}
+
+
+/* Below code is for All Customers section */
+
+.customer-sections{
+  text-align: center;
+}
+
+.customer.header{
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  margin: 1rem auto;
+  max-width: 80%;
+}
+
+.outer{
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  max-width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.customer{
+  background-color: rgba(120, 96,123, 0.3);
+  font-family: 'Oswald';
+  margin: 0.2rem auto;
+  text-align: left;
+  padding: 0.7rem;
+  max-width: 80%;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+}
+
+.customer:hover{
+  background-color: rgba(60, 205, 67, 0.3);
+  
+}
+
+.cus-info{
+  display: inline-block;
+  width: 23%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* for making the page responsive */
+@media (max-width: 1100px) {
+  .account-left{
+    float: none;
+    height: 7rem;
+    text-align: center;
+  }
+  .account-right{
+    margin: 1rem 2rem;
+  }
+  .transaction{
+    padding: 1rem 0;
+  }
+
+  .transaction .data, .customer .data{
+    visibility: visible;
+    position: relative;
+  }
+
+  .transaction .detail{
+    display: block;
+    max-width: 100%;
+  }
+
+  .header{
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .create form{
+    max-width: 70%;
+  }
+
+  .cus-info{
+    display: block;
+    width: 80%;
+    margin: 1rem;
+    text-align: left;
+  }
+}
+
+/* The below code is for alert message scrolling */
+.alert {
+  height: 50px;	
+  overflow: hidden;
+  position: relative;
+  color: red;
+  font-weight: 700;
+ }
+ .alert p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform:translateX(100%);
+  -webkit-transform:translateX(100%);	
+  transform:translateX(100%);
+  /* Apply animation to this element */	
+  -moz-animation: scroll-left 15s linear infinite;
+  -webkit-animation: scroll-left 15s linear infinite;
+  animation: scroll-left 15s linear infinite;
+ }
+ /* Move it (define the animation) */
+ @-moz-keyframes scroll-left {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+ }
+ @-webkit-keyframes scroll-left {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+ }
+ @keyframes scroll-left {
+  0%   { 
+  -moz-transform: translateX(100%); /* Browser bug fix */
+  -webkit-transform: translateX(100%); /* Browser bug fix */
+  transform: translateX(100%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); /* Browser bug fix */
+  -webkit-transform: translateX(-100%); /* Browser bug fix */
+  transform: translateX(-100%); 
+  }
+ }
+
+ /* The below code is for button in account page */
+ .btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ /* The below is the code for success and failure pages animation */
+ .container{
+  text-align: center;
+  margin: 2rem auto;
+ }
