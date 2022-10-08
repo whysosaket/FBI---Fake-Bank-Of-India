@@ -14,8 +14,9 @@
 </div>
 
 <form>
-<input class="btn" type="button" value="Transfer Funds" onclick="location.href='/transfer/<%= account.account_no %>'" style="cursor:pointer;">
-<input class="btn" type="button" value="Update Password" onclick="location.href='/updatepassword/<%= account.account_no %>'" style="cursor:pointer;">
+<input class="btn btn-success" type="button" value="Transfer Funds" onclick="location.href='/transfer/<%= account.account_no %>'" style="cursor:pointer;">
+<input class="btn btn-warning" type="button" value="Update Password" onclick="location.href='/updatepassword/<%= account.account_no %>'" style="cursor:pointer;">
+<input class="btn btn-danger" type="button" value="Delete Account" onclick="location.href='/updatepassword/<%= account.account_no %>'" style="cursor:pointer;">
 </form>
 
 

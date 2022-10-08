@@ -244,7 +244,7 @@ app
 
 app.route("/customers").get((req, res) => {
   (async () => {
-    let accounts = await Account.find({}, "name account_no ifsc balance");
+    let accounts = await Account.find({}, "name account_no ifsc branch balance");
     res.render("customers", { accounts: accounts });
   })();
 });
