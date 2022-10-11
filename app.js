@@ -353,7 +353,53 @@ app.listen(3000, () => {
   console.log("Server Started at PORT: 3000");
 });
 
+app.route('/delete/:account')
+.get((req,res)=>{
+  res.render('delete', {account: req.params.account});
+})
 
+app.post('/delete',(req, res)=>{
+  (async ()=>{
+    let data = req.body;
+
+    let accountNumber = data.accountNumber;
+    let pin = data.pin;
+
+    //Retrieving Account Information
+    let account = await Account.findOne(
+      { account_no: accountNumber },
+      "account_no pin"
+    );
+
+    // Account not found case
+    if(account == null){
+      fail("Sorry, Account doesn't exist!");
+      res.redirect('/status');
+      return null;
+    }
+
+    //Validating pin
+    if (pin != account.pin) {
+      fail("Invalid Pin!");
+      res.redirect("/status");
+      return null;
+    }
+
+    // Performing delete
+
+    let del = await Account.deleteOne({account_no: accountNumber});
+
+    if(del.acknowledged == true){
+      status('sad', 'Sorry, to see you go!');
+    }else{
+      fail("Something Went Wrong!");
+    }
+
+    res.redirect('/status');
+
+
+  })();
+})
 
 
 //The below codes are customFunctions
@@ -368,4 +414,9 @@ function fail(text){
 function success(text){
     statusImage = "success";
     statusText = text;
+}
+
+function status(emotion, text){
+  statusImage = emotion;
+  statusText = text;
 }
