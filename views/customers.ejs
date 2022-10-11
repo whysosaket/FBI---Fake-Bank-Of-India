@@ -17,10 +17,10 @@
 
         <% for(let i=0;i<accounts.length;i++){ %>
     <div class="customer">
-        <div class="cus-info name" onclick="location.href='/account/<%= accounts[i].account_no %>'" style="cursor:pointer;"><h5><span class="data">NAME: </span><%= accounts[i].name %></h5></div>
-        <div class="cus-info"><h5><span class="data">ACC_NO:</span><%= accounts[i].account_no %></h5></div>
-        <div class="cus-info" onclick="location.href='/account/<%= accounts[i].account_no %>'" style="cursor:pointer;"><h5><span class="data">BRANCH:</span><%= accounts[i].branch %></h5></div>
-        <div class="cus-info" onclick="location.href='/account/<%= accounts[i].account_no %>'" style="cursor:pointer;"><h5 style="color: rgb(0, 132, 24)"><span class="data">BALANCE:</span> $<%= accounts[i].balance %></h5></div>
+        <div class="cus-info name" onclick="location.href='/account/<%= accounts[i].account_no %>'" style="cursor:pointer;"><h6><span class="data">NAME: </span><%= accounts[i].name %></h6></div>
+        <div class="cus-info"><h6><span class="data">ACC_NO:</span><%= accounts[i].account_no %></h6></div>
+        <div class="cus-info" onclick="location.href='/account/<%= accounts[i].account_no %>'" style="cursor:pointer;"><h6><span class="data">BRANCH:</span><%= accounts[i].branch %></h6></div>
+        <div class="cus-info" onclick="location.href='/account/<%= accounts[i].account_no %>'" style="cursor:pointer;"><h6 style="color: rgb(41, 222, 0); font-weight: 700;"><span class="data">BALANCE:</span> $<%= accounts[i].balance %></h6></div>
     </div>
         <% } %>
     </div> 
