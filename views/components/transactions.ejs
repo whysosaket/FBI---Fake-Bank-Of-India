@@ -24,9 +24,7 @@
     <br>
     <!-- the below code is for the transaction unit -->
     <div class="transactions">
-        <% if(transactions.length === 0) { %>
-            <h3 style="color: rgb(229, 208, 208);">No Transactions</h3>
-            <% } %>
+        
 <% for(let i=0; i<transactions.length; i++) { %>
     <div class="transaction <%= transactions[i].type %>">
 
@@ -48,6 +46,12 @@
     </div>
     
 
+    <% } %>
+
+    <% if(transactions.length === 0) { %>
+        <h3 style="color: rgb(229, 208, 208);">No Transactions</h3>
+    <% } else { %>
+    <h6 style="color: rgb(106, 106, 106); margin: 1rem">xx End of Transactions xx</h6>
     <% } %>
 </div>
 </div>
