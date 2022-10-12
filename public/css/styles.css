@@ -15,6 +15,7 @@ body {
   z-index: -1;
   background-repeat: repeat-y;
   background-image: url("images/indexOverlay.jpg");
+  object-fit: cover;
 }
 
 .trademark {
