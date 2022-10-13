@@ -216,6 +216,10 @@ body {
 
 /* for making the page responsive */
 @media (max-aspect-ratio: 9/10) {
+
+  .status {
+    max-width: 300px;
+  }
   .account-left {
     float: none;
     height: 7rem;
@@ -330,4 +334,8 @@ body {
 .container {
   text-align: center;
   margin: 2rem auto;
+}
+
+.status{
+  max-width: 300px;
 }
