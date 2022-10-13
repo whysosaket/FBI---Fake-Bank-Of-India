@@ -269,7 +269,8 @@ app.route("/account/:number").get((req, res) => {
             transactionIDs[i].sender == account_no
               ? transactionIDs[i].recipient
               : transactionIDs[i].sender,
-          type: transactionIDs[i].sender == account_no ? "debit" : "credit",
+            type: transactionIDs[i].sender == account_no ? "table-danger" : "table-success"
+          // type: transactionIDs[i].sender == account_no ? "debit" : "credit"
         };
         transactions.push(transactionsObject);
       }
