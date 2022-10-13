@@ -349,11 +349,6 @@ app.get("/status", (req, res) => {
   res.render("status", { statusText: statusText, statusImage: statusImage });
 });
 
-//Setting Server Listening Port
-app.listen(3000, () => {
-  console.log("Server Started at PORT: 3000");
-});
-
 app.route('/delete/:account')
 .get((req,res)=>{
   res.render('delete', {account: req.params.account});
@@ -421,3 +416,15 @@ function status(emotion, text){
   statusImage = emotion;
   statusText = text;
 }
+
+
+
+
+//Setting Server Listening Port
+let port = process.env.PORT;
+if(port == null || ""){
+    port = 3000;
+}
+
+app.listen(port, ()=> console.log("Server started!!"));
+
